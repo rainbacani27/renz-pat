@@ -54,6 +54,19 @@ body {font-family: "Forum", sans-serif; background-color: #F6F2E7;}
   position: relative;
 }
 
+.bg-img4 {
+  /* The image used */
+  background-image: url("{% static 'images/paper-bg.png' %}");
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
 @font-face {
         font-family: "TheSeasons";
         src : url("{% static 'images/TheSeasons.otf' %}") format("opentype")
@@ -70,6 +83,10 @@ body {font-family: "Forum", sans-serif; background-color: #F6F2E7;}
         font-family: "Madelyn";
         src : url("{% static 'images/Madelyn.otf' %}") format("opentype")
       } 
+@font-face {
+        font-family: "Passionate";
+        src : url("{% static 'images/Passionate.otf' %}") format("opentype")
+      }     
 
 h3 {
       font-family: "Forum";
@@ -427,6 +444,277 @@ body {
   </div>
 </div>
 <!-- End of Reception Section -->
+
+<!-- Entourage Section -->
+<!-- Large Screen -->
+<div class= "w3-container  w3-hide-medium w3-hide-small w3-center" style="width: 100%" >
+  <div class = "bg-img4"       >
+    <img
+    class="w3-image"
+    src="{% static 'images/flower3-top.png' %}"
+    alt="Image 1"
+    style="width: 40%"/>
+      <p  id="details" class = "w3-center " style = "line-height: 1;  ">
+          <nobr style="font-family:Passionate; font-size:3vmax; letter-spacing: 1pt; line-height: 1.3;">Bridal Entourage</nobr>
+      </p>
+      
+      <!-- Parents -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+        
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">Parent of the Bride</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Mary Ann R. Buenaventura</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">Parents of the Groom</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mr. Roberto C. Bacani</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: left ">Mrs. Lourdes B. Bacani</i><br>
+          </p>
+        </div>
+      </div>
+
+      <!-- Principal Sponsors -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+        
+        <b style="font-family:Baker; font-size:16pt; ">Principal Sponsors</b>
+        
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Vice Mayor Ronnie M. Ortiguerra</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Serafin R. Buenaventura</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Arch. Windel E. Medina</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Erwin T. Mozo</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mrs. Nenita B. Bucud</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Marirose M. Buenaventura</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Evangeline Custodio</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Mapee R. Mozo</i>
+            
+          </p>
+        </div>
+      </div>
+
+      <!-- Medyo Honor -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">Best Man</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Marc Kevin A. Tomas</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">Maid of Honor</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Ms. Rhea Loreign B. Bacani</i><br>
+          </p>
+        </div>
+      </div>
+      <!-- Secondary Sponsors -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 100%; text-align: center">
+            <b style="font-family:Baker; font-size:16pt; ">Secondary Sponsors</b><br>
+            <b style="font-family:Baker; font-size:15pt; text-align: center;">To Cover Us As One</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: center; ">Ms. Rhea Loreign B. Bacani</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mr. Marc Kevin A. Tomas</i>
+          </p>
+        </div>
+      </div>
+
+      <!-- Binding Light -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">To Bind Us Together</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Rafael A. Castro</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Edlyn B. Debuque</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">To Light Our Path</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. John Jonas O. Poyaoan</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Maria Emmanuelle R. Bravo</i>
+          </p>
+        </div>
+      </div>
+      
+      <!-- Bearers -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">Bible Bearer</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Mikko B. Tolentino</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">Coin Bearer</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mr. Cedric B. Cortez</i><br>
+          </p>
+        </div>
+      </div>
+      <!-- Ring Bearer -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 100%; text-align: center">
+            <b style="font-family:Baker; font-size:15pt; ">Ring Bearer</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mr. Rainiell B. Bacani</i>
+          </p>
+        </div>
+      </div>
+      <!-- Flower Girls -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;  margin-top:0px">
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 100%; text-align: center">
+            <b style="font-family:Baker; font-size:15pt; ">To Shower Our Aisle with Flowers</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Lourdine Mae Debuque</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Aleria Franchesca R. Debuque</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mary Buenafe Debuque</i>
+          </p>
+        </div>
+        
+      </div>
+        <img
+          class="w3-image w3-center"
+          src="{% static 'images/flower3-bottom.png' %}"
+          style="min-width: 40%; "/>
+  </div>
+    
+</div>  
+<!-- end of Entourage Section for Large Screens -->
+
+<!-- Entourage Section -->
+<!-- Small Screen -->
+<div class= "w3-container  w3-hide-large w3-center" style="width: 100%" >
+  <div class = "bg-img4"       >
+    <img
+    class="w3-image"
+    src="{% static 'images/flower3-top.png' %}"
+    alt="Image 1"
+    style="width: 40%"/>
+      <p  id="details" class = "w3-center " style = "line-height: 1;  ">
+          <nobr style="font-family:Passionate; font-size:3.2vmax; letter-spacing: 1pt; line-height: 1.3;">Bridal Entourage</nobr>
+      </p>
+      
+      <!-- Parents -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 0%; margin-right:  0%; text-align: center;">
+        
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:3vmin ">Parent of the Bride</b><br>
+            <nobr style="font-family:Roboto; font-size:3.1vmin; text-align: right ;"><i>Ms. Mary Ann R. Buenaventura</i></nobr>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:3vmin; text-align: left;">Parents of the Groom</b><br>
+            <i style="font-family:Roboto; font-size:3.1vmin;text-align: left; ">Mr. Roberto C. Bacani</i><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: left ">Mrs. Lourdes B. Bacani</i><br>
+          </p>
+        </div>
+      </div>
+
+      <!-- Principal Sponsors -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+        
+        <b style="font-family:Baker; font-size:16pt; ">Principal Sponsors</b>
+        
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Vice Mayor Ronnie M. Ortiguerra</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Serafin R. Buenaventura</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Arch. Windel E. Medina</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Erwin T. Mozo</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mrs. Nenita B. Bucud</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Marirose M. Buenaventura</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Evangeline Custodio</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Mapee R. Mozo</i>
+            
+          </p>
+        </div>
+      </div>
+
+      <!-- Medyo Honor -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">Best Man</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Marc Kevin A. Tomas</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">Maid of Honor</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Ms. Rhea Loreign B. Bacani</i><br>
+          </p>
+        </div>
+      </div>
+      <!-- Secondary Sponsors -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 100%; text-align: center">
+            <b style="font-family:Baker; font-size:16pt; ">Secondary Sponsors</b><br>
+            <b style="font-family:Baker; font-size:15pt; text-align: center;">To Cover Us As One</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: center; ">Ms. Rhea Loreign B. Bacani</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mr. Marc Kevin A. Tomas</i>
+          </p>
+        </div>
+      </div>
+
+      <!-- Binding Light -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">To Bind Us Together</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Rafael A. Castro</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Edlyn B. Debuque</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">To Light Our Path</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. John Jonas O. Poyaoan</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Maria Emmanuelle R. Bravo</i>
+          </p>
+        </div>
+      </div>
+      
+      <!-- Bearers -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex">
+          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+            <b style="font-family:Baker; font-size:15pt; ">Bible Bearer</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Mikko B. Tolentino</i>
+          </p>
+          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+            <b style="font-family:Baker; font-size:15pt; text-align: left;">Coin Bearer</b><br>
+            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mr. Cedric B. Cortez</i><br>
+          </p>
+        </div>
+      </div>
+      <!-- Ring Bearer -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 100%; text-align: center">
+            <b style="font-family:Baker; font-size:15pt; ">Ring Bearer</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mr. Rainiell B. Bacani</i>
+          </p>
+        </div>
+      </div>
+      <!-- Flower Girls -->
+      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;  margin-top:0px">
+        <div style=" display:flex; margin-top:-16px">
+          <p style = "flex: 100%; text-align: center">
+            <b style="font-family:Baker; font-size:15pt; ">To Shower Our Aisle with Flowers</b><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Lourdine Mae Debuque</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Aleria Franchesca R. Debuque</i><br>
+            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mary Buenafe Debuque</i>
+          </p>
+        </div>
+        
+      </div>
+        <img
+          class="w3-image w3-center"
+          src="{% static 'images/flower3-bottom.png' %}"
+          style="min-width: 40%; "/>
+  </div>
+    
+</div>  
+<!-- end of Entourage Section for Small  Screens -->
+
 
 <!-- Details Section -->
 <!-- Large Screen -->
