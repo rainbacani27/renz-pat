@@ -57,7 +57,7 @@ body {font-family: "Forum", sans-serif; background-color: #F6F2E7;}
 .bg-img4 {
   /* The image used */
   background-image: url("{% static 'images/paper-bg.png' %}");
-  width: 100%;
+  min-width: 100%;
 
   /* Center and scale the image nicely */
   background-repeat: no-repeat;
@@ -148,7 +148,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0%;
-  transform: translate(0%, -35%);
+  transform: translate(0%, -50%);
 }
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
@@ -185,21 +185,20 @@ body {
       <!-- Top navigation -->
 <div class="topnav w3-top w3-bar bg-img  w3-hide-small w3-hide-medium ">
 
-      <!-- Centered link -->
-      <div class="topnav-centered">
-        <a href="#home" class="active"><h5>R&amp;P 01.18.23</h5></a>
-      </div>
+      
     
       <!-- Left-aligned links (default) -->
       <div style="margin-left: 16px;">
-            <a href="#story">Our Story</a>
-            <a href="#bigday">The Big Day</a>
-            <a href="#details">Details</a>
+        <a href="#top" class="active" style="font-family:Forum; font-size: 22px;">R&amp;P 01.18.23</a>
       </div>
     
       <!-- Right-aligned links -->
       <div class="topnav-right" style="margin-right: 16px;">
-        <button style="font-family: Baker; border-color: black; border-width: 0.1px; 
+        <a href="#story">Our Story</a>
+        <a href="#bigday">The Big Day</a>
+        <a href="#entourage">The Entourage</a>
+        <a href="#details">Details</a>
+        <button style="font-family: Baker; border-color: black; border-width: 0.1px; top: 50%; transform: translate(0%, 35%); margin-left:16px;
         background-color: transparent; padding:0; line-height: 0;"><a href="#rsvp"><b>RSVP</b></a></button>
       </div>
      
@@ -210,16 +209,17 @@ body {
 
       <!-- Centered link -->
       <div>
-        <a href="#home" class="active w3-margin-left" style="font-family: Forum; font-size: 30px; position: absolute; top: 50%; transform: translate(0%, -50%);">R&amp;P 01.18.23</a>
-        <a href="javascript:void(0)" class=" w3-margin-right 3-hover-gray w3-right"  style="font-family: Forum; font-size: 25px"  onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#top" class="active w3-margin-left" style="font-family: Forum; font-size: 25px; position: absolute; top: 50%; transform: translate(0%, -50%);  padding:0; ">R&amp;P 01.18.23</a>
+        <a href="javascript:void(0)" class=" w3-margin-right 3-hover-gray w3-right"  style="font-family: Forum; font-size: 25px ; padding:0; "  onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       </div>
     
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-top w3-center" style="margin-top:97.4px; padding: 50px; max-height:80%;">
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-top w3-center" style="margin-top:62px; padding: 50px; max-height:80%;">
   <a href="#story-mobile" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"  style="font-size: 20pt;">Our Story</a>
   <a href="#bigday" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="font-size: 20pt;"><nobr>The Big Day</nobr></a>
+  <a href="#entourage-mobile" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="font-size: 20pt;"><nobr>The Entourage</nobr></a>
   <a href="#details-mobile" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="font-size: 20pt;">Details</a>
   <a href="#rsvp-mobile" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="font-size: 20pt;"><b>RSVP</b></a>
 </div>
@@ -244,7 +244,7 @@ body {
     </div>
 </header>  
 <!-- Mobile Screen-->
-<header class="w3-content w3-center w3-hide-large" style="min-width:100%; margin-top: 97.5px; position:relative">
+<header class="w3-content w3-center w3-hide-large" style="min-width:100%; margin-top: 60px; position:relative">
   <img
     class="w3-image"
     src="{% static 'images/banner-mobile.png' %}"
@@ -264,7 +264,7 @@ body {
 <!-- Our Story Section -->
 
 <!-- Large Screen -->
-<div class="w3-container w3-center w3-hide-small" style="background-color: #E8DDD4; width:100%; padding-top:40px;" id="story">
+<div class="w3-container w3-center w3-hide-small w3-hide-medium" style="background-color: #E8DDD4; width:100%; padding-top:40px;" id="story">
   <div class = "w3-content">
     <img
         class="w3-image"
@@ -307,9 +307,9 @@ body {
 
 
 <!-- Mobile Screen -->
-<div id="story-mobile" class="w3-container w3-center w3-hide-large w3-hide-medium" style="background-color: #E8DDD4; width:100%; padding-top:40px;" id="story">
+<div class="w3-container w3-center w3-hide-large" style="background-color: #E8DDD4; width:100%; padding-top:40px;" id="story">
   <div class = "w3-content">
-    <img
+    <img  id="story-mobile"
         class="w3-image w3-center"
         src="{% static 'images/flower1.png' %}"
         alt="flower1"
@@ -322,13 +322,13 @@ body {
         class="w3-image"
         src="{% static 'images/story.png' %}"
         alt="flower1"
-        style="max-width: 80%;margin-top: -20px;"
+        style="width: 80%; max-width: 500px; margin-top: -20px;"
       />
   </div>
   <div class = "w3-right" >
         <p style=   "text-align:right; 
                     margin-left: 50px; margin-bottom: 10px;
-                    font-size: 5vmin; font-family:Forum">
+                    font-size: 4vmin; font-family:Forum">
                     "It was a match! Swiping her right was the best thing that happened to me. I was mesmerized by her smile. Since then, I couldnt look away. Little did I know, I was swiping right my future wife." 
                     <br><span style = "font-family: Darlington; font-size: 7vmin; line-height: 1;">&nbsp;Renz Lenard Bacani</span>        
         </p>
@@ -338,14 +338,14 @@ body {
         <p class = "t"
         style=      "text-align:left;
                     margin-right: 50px;
-                    font-size: 5vmin; font-family:Forum">
+                    font-size: 4vmin; font-family:Forum">
         
-        "It took me courage to meet him. Good thing I did. Six years ago, we're strangers, became best friends, true lovers, and badass partners in life."        
+        "It took me couragfe to meet him. Good thing I did. Six years ago, we're strangers, became best friends, true lovers, and badass partners in life."        
         <br><span style = "font-family: Darlington; font-size: 7vmin; line-height: 1;">&nbsp;Patricia Anne Buenaventura</span> 
         </p>
   </div>
   <div class=" w3-container w3-center" style="background-color: #E8DDD4; width:100%">
-    <p style="font-family: Forum; font-size: 5vmin;">Now, we're preparing to enter a new chapter of our love story.</p><br>
+    <p style="font-family: Forum; font-size: 4vmin;">Now, we're preparing to enter a new chapter of our love story.</p><br>
   </div>
 </div>
 
@@ -438,7 +438,7 @@ body {
             <span style="font-family:Forum; font-size:20pt;  letter-spacing:1pt">11:30 AM</span><br><br>
             <span style="font-family:Forum; font-size:16pt; line-height:1.2" >Meyer's Place</span><br>
             <span style="font-family:Forum; font-size:10pt; line-height:0.4" >99 Dapitan St.<br>cor. Biak na Bato St.<br>Quezon City</span><br>
-            <a href="https://goo.gl/maps/6BxpUQBpWT6CdzfH7" target="_blank" style="font-family:Forum; font-size:16pt; line-height:1.2">Map</a>
+            <a  id="entourage-mobile" href="https://goo.gl/maps/6BxpUQBpWT6CdzfH7" target="_blank" style="font-family:Forum; font-size:16pt; line-height:1.2">Map</a>
         </p>
     </div>    
   </div>
@@ -447,14 +447,14 @@ body {
 
 <!-- Entourage Section -->
 <!-- Large Screen -->
-<div class= "w3-container  w3-hide-medium w3-hide-small w3-center" style="width: 100%" >
-  <div class = "bg-img4"       >
-    <img
+<div  class= "w3-container w3-hide-small w3-center" style="width: 100%" >
+  <div class = "bg-img4" style="width: 100%"      >
+    <img id="entourage"
     class="w3-image"
     src="{% static 'images/flower3-top.png' %}"
     alt="Image 1"
-    style="width: 40%"/>
-      <p  id="details" class = "w3-center " style = "line-height: 1;  ">
+    style="width: 70%"/>
+      <p  class = "w3-center " style = "line-height: 1;  ">
           <nobr style="font-family:Passionate; font-size:3vmax; letter-spacing: 1pt; line-height: 1.3;">Bridal Entourage</nobr>
       </p>
       
@@ -574,7 +574,7 @@ body {
         <img
           class="w3-image w3-center"
           src="{% static 'images/flower3-bottom.png' %}"
-          style="min-width: 40%; "/>
+          style="width: 70%; "/>
   </div>
     
 </div>  
@@ -582,126 +582,126 @@ body {
 
 <!-- Entourage Section -->
 <!-- Small Screen -->
-<div class= "w3-container  w3-hide-large w3-center" style="width: 100%" >
-  <div class = "bg-img4"       >
-    <img
+<div class= "w3-container w3-hide-large w3-hide-medium w3-center" style="width: 100%" >
+  <div class = "bg-img4"  >
+    <img  
     class="w3-image"
     src="{% static 'images/flower3-top.png' %}"
     alt="Image 1"
-    style="width: 40%"/>
-      <p  id="details" class = "w3-center " style = "line-height: 1;  ">
-          <nobr style="font-family:Passionate; font-size:3.2vmax; letter-spacing: 1pt; line-height: 1.3;">Bridal Entourage</nobr>
+    style="width: 70%"/>
+      <p  class = "w3-center " style = "line-height: 1;  ">
+          <span style="font-family:Passionate; font-size:2.6vmax; letter-spacing: 1pt; line-height: 1;">Bridal Entourage</span>
       </p>
       
       <!-- Parents -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 0%; margin-right:  0%; text-align: center;">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-40px">
         
         <div style=" display:flex">
-          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
+          <p style = "flex: 50%; text-align: right ; margin-right: 4%">
             <b style="font-family:Baker; font-size:3vmin ">Parent of the Bride</b><br>
             <nobr style="font-family:Roboto; font-size:3.1vmin; text-align: right ;"><i>Ms. Mary Ann R. Buenaventura</i></nobr>
           </p>
-          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
+          <p style = "flex: 50%; text-align: left ; margin-left: 4%">
             <b style="font-family:Baker; font-size:3vmin; text-align: left;">Parents of the Groom</b><br>
             <i style="font-family:Roboto; font-size:3.1vmin;text-align: left; ">Mr. Roberto C. Bacani</i><br>
-            <i style="font-family:Roboto; font-size:3.1vmin; text-align: left ">Mrs. Lourdes B. Bacani</i><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: left ">Mrs. Lourdes B. Bacani</i>
           </p>
         </div>
       </div>
 
       <!-- Principal Sponsors -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-28px">
         
-        <b style="font-family:Baker; font-size:16pt; ">Principal Sponsors</b>
+        <b style="font-family:Baker; font-size:3vmin; ">Principal Sponsors</b>
         
-        <div style=" display:flex; margin-top:-16px">
-          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Vice Mayor Ronnie M. Ortiguerra</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Serafin R. Buenaventura</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Arch. Windel E. Medina</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Erwin T. Mozo</i>
+        <div style=" display:flex; margin-top:-22px">
+          <p style = "flex: 50%; text-align: right ; margin-right: 4%">
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">V. Mayor Ronnie M. Ortiguerra</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mr. Serafin R. Buenaventura</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Arch. Windel E. Medina</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mr. Erwin T. Mozo</i></nobr>
           </p>
-          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
-            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mrs. Nenita B. Bucud</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Marirose M. Buenaventura</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Evangeline Custodio</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mrs. Mapee R. Mozo</i>
+          <p style = "flex: 50%; text-align: left ; margin-left: 4%">
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin;text-align: left; ">Mrs. Nenita B. Bucud</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mrs. Marirose M. Buenaventura</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mrs. Evangeline Custodio</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mrs. Mapee R. Mozo</i></nobr>
             
           </p>
         </div>
       </div>
 
       <!-- Medyo Honor -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-40px">
         <div style=" display:flex">
-          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
-            <b style="font-family:Baker; font-size:15pt; ">Best Man</b><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Marc Kevin A. Tomas</i>
+          <p style = "flex: 50%; text-align: right ; margin-right: 4%">
+            <b style="font-family:Baker; font-size:3.1vmin; ">Best Man</b><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mr. Marc Kevin A. Tomas</i></nobr>
           </p>
-          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
-            <b style="font-family:Baker; font-size:15pt; text-align: left;">Maid of Honor</b><br>
-            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Ms. Rhea Loreign B. Bacani</i><br>
+          <p style = "flex: 50%; text-align: left ; margin-left: 4%">
+            <nobr><b style="font-family:Baker; font-size:3vmin; text-align: left;">Maid of Honor</b></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin;text-align: left; ">Ms. Rhea Loreign B. Bacani</i></nobr><br>
           </p>
         </div>
       </div>
       <!-- Secondary Sponsors -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-28px">
         <div style=" display:flex; margin-top:-16px">
           <p style = "flex: 100%; text-align: center">
-            <b style="font-family:Baker; font-size:16pt; ">Secondary Sponsors</b><br>
-            <b style="font-family:Baker; font-size:15pt; text-align: center;">To Cover Us As One</b><br>
-            <i style="font-family:Roboto; font-size:16pt;text-align: center; ">Ms. Rhea Loreign B. Bacani</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mr. Marc Kevin A. Tomas</i>
+            <b style="font-family:Baker; font-size:3.1vmin; ">Secondary Sponsors</b><br>
+            <b style="font-family:Baker; font-size:3vmin; text-align: center;">To Cover Us As One</b><br>
+            <i style="font-family:Roboto; font-size:3.1vmin;text-align: center; ">Ms. Rhea Loreign B. Bacani</i><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: center ;">Mr. Marc Kevin A. Tomas</i>
           </p>
         </div>
       </div>
 
       <!-- Binding Light -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-40px">
         <div style=" display:flex">
-          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
-            <b style="font-family:Baker; font-size:15pt; ">To Bind Us Together</b><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Rafael A. Castro</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Edlyn B. Debuque</i>
+          <p style = "flex: 50%; text-align: right ; margin-right: 4%">
+            <b style="font-family:Baker; font-size:3vmin; ">To Bind Us Together</b><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mr. Rafael A. Castro</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Ms. Edlyn B. Debuque</i></nobr>
           </p>
-          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
-            <b style="font-family:Baker; font-size:15pt; text-align: left;">To Light Our Path</b><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. John Jonas O. Poyaoan</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Ms. Maria Emmanuelle R. Bravo</i>
+          <p style = "flex: 50%; text-align: left ; margin-left: 4%">
+            <b style="font-family:Baker; font-size:3vmin; text-align: left;">To Light Our Path</b><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mr. John Jonas O. Poyaoan</i></nobr><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Ms. Maria Emmanuelle R. Bravo</i></nobr>
           </p>
         </div>
       </div>
       
       <!-- Bearers -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-40px">
         <div style=" display:flex">
-          <p style = "flex: 50%; text-align: right ; margin-right: 5%">
-            <b style="font-family:Baker; font-size:15pt; ">Bible Bearer</b><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: right ;">Mr. Mikko B. Tolentino</i>
+          <p style = "flex: 50%; text-align: right ; margin-right: 4%">
+            <b style="font-family:Baker; font-size:3vmin; ">Bible Bearer</b><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin; text-align: right ;">Mr. Mikko B. Tolentino</i></nobr>
           </p>
-          <p style = "flex: 50%; text-align: left ; margin-left: 5%">
-            <b style="font-family:Baker; font-size:15pt; text-align: left;">Coin Bearer</b><br>
-            <i style="font-family:Roboto; font-size:16pt;text-align: left; ">Mr. Cedric B. Cortez</i><br>
+          <p style = "flex: 50%; text-align: left ; margin-left: 4%">
+            <b style="font-family:Baker; font-size:3vmin; text-align: left;">Coin Bearer</b><br>
+            <nobr><i style="font-family:Roboto; font-size:3.1vmin;text-align: left; ">Mr. Cedric B. Cortez</i></nobr><br>
           </p>
         </div>
       </div>
       <!-- Ring Bearer -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center; margin-top:-28px">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-28px">
         <div style=" display:flex; margin-top:-16px">
           <p style = "flex: 100%; text-align: center">
-            <b style="font-family:Baker; font-size:15pt; ">Ring Bearer</b><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mr. Rainiell B. Bacani</i>
+            <b style="font-family:Baker; font-size:3vmin; ">Ring Bearer</b><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: center ;">Mr. Rainiell B. Bacani</i>
           </p>
         </div>
       </div>
       <!-- Flower Girls -->
-      <div class = "w3-container" style="line-height: 1.3; margin-left: 10%; margin-right:  10%; text-align: center;  margin-top:0px">
+      <div class = "w3-container" style="line-height: 1; margin-left: 0%; margin-right:  0%; text-align: center; margin-top:-28px">
         <div style=" display:flex; margin-top:-16px">
           <p style = "flex: 100%; text-align: center">
-            <b style="font-family:Baker; font-size:15pt; ">To Shower Our Aisle with Flowers</b><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Lourdine Mae Debuque</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Aleria Franchesca R. Debuque</i><br>
-            <i style="font-family:Roboto; font-size:16pt; text-align: center ;">Mary Buenafe Debuque</i>
+            <b style="font-family:Baker; font-size:3vmin; ">To Shower Our Aisle with Flowers</b><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: center ;">Lourdine Mae Debuque</i><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: center ;">Aleria Franchesca R. Debuque</i><br>
+            <i style="font-family:Roboto; font-size:3.1vmin; text-align: center ;">Mary Buenafe Debuque</i>
           </p>
         </div>
         
@@ -709,7 +709,7 @@ body {
         <img
           class="w3-image w3-center"
           src="{% static 'images/flower3-bottom.png' %}"
-          style="min-width: 40%; "/>
+          style="width: 70%; "/>
   </div>
     
 </div>  
@@ -721,8 +721,8 @@ body {
 <div class= "w3-container w3-center w3-hide-small  w3-hide-medium" style="min-width: 100%;background-color: #FBF1EC;" >
   <div class = "bg-img2 w3-padding-16 w3-center"   >
 
-      <p  id="details" class = "w3-center " style = "line-height: 1;  ">
-        <img
+      <p class = "w3-center " style = "line-height: 1;  ">
+        <img id="details"
         class="w3-image"
         src="{% static 'images/flower-crown.png' %}"
         alt="Image 1"
@@ -747,22 +747,21 @@ body {
             <span style="font-family: Forum; font-size: 16pt;">Semi-formal</span>
             <br><br>
             In shades of
-            <br>
-            <img
-              class="w3-image"
-              src="{% static 'images/palette.png' %}"
-              alt="Dress Sample"
-              style="min-width: 10%; max-width: 240px;"/>
-            <br>
+                     
         </div>
         <div class = "w3-third" style="line-height: 1;">
           Ninang<br>
           <span style="font-family: Forum; font-size: 16pt;">Long Dress</span>
         </div>
+        <img
+        class="w3-image w3-center"
+        src="{% static 'images/palette.png' %}"
+        alt="Dress Sample"
+        style="min-width: 10%; max-width: 240px;"/>
       </div>
       
       <!-- Gift Notes -->
-      <div class = "w3-container" style="line-height: 1.5; padding-top: 64px; margin-left: 30%; margin-right:  30%;">
+      <div class = "w3-container" style="line-height: 1.5; padding-top: 2px; margin-left: 30%; margin-right:  30%;">
         <br>
         <img
           class="w3-image"
@@ -936,7 +935,7 @@ body {
 <!-- We Hope You Can Make It for Small screens-->
 <div class="w3-hide-large" style="min-width:100%; background-color:#EDCBB8;" id="rsvp-mobile">
     <div style = "margin-left: 16pt; margin-right: 10pt;
-                line-height: 1.1; padding-top: 32px; "  >
+                line-height: 1.1; padding-top: 60px; "  >
         <span style="font-family: Madelyn; font-size: 6vmax; line-height: 1.1; text-align: center;">We hope you can make it!</span><br>
           <span style="font-family: Forum; font-size: 2.2vmax; letter-spacing: 0.1pt; text-align: left;">To confirm your attendance, please fill up the Google Form in the link below.</span><br>
           <button style = "width: 20%;
@@ -964,9 +963,13 @@ body {
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-center w3-xlarge">
     <div class="w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/rainbacani27" target="_blank">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        
+    <a href="https://www.instagram/makeitrainiell" target="_blank">
+      <i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="mailto:rainbacani27@gmail.com" target="_blank">
+      <i class="fa fa-envelope w3-hover-opacity"></i></a>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
