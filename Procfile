@@ -1,1 +1,0 @@
-web: gunicorn renzpat.wsgi --log-file -
